@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pesquisa — cientista social pesquisa...?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero {
+      padding: 72px 48px 56px;
+      background: var(--cream);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: clamp(40px, 5vw, 72px);
+      line-height: 1.0;
+      margin-bottom: 20px;
+    }
+
+    .page-hero h1 em { font-style: italic; color: var(--orange); }
+
+    .page-hero p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      max-width: 560px;
+    }
+
+    .themes-section {
+      padding: 64px 48px 96px;
+    }
+
+    .themes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .theme-card {
+      border-radius: 4px;
+      padding: 32px 28px 36px;
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: transform 0.2s, filter 0.2s;
+      text-decoration: none;
+    }
+
+    .theme-card:hover { transform: translateY(-4px); filter: brightness(1.06); }
+
+    .card-red  { background: var(--card-red); }
+    .card-orange  { background: var(--card-orange); }
+    .card-pink    { background: var(--card-pink); }
+    .card-mustard { background: var(--card-mustard); }
+    .card-black   { background: var(--card-black); }
+    .card-lilac    { background: var(--card-lilac); }
+
+    .card-top {}
+
+    .card-category {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 10px;
+      font-weight: 500;
+      display: block;
+    }
+
+    .card-name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 1.2;
+      color: #B8D4E3;
+    }
+
+    .card-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .card-desc {
+      font-size: 12px;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.65);
+      max-width: 80%;
+    }
+
+    .card-arrow {
+      color: rgba(255,255,255,0.7);
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+      .page-hero { padding: 48px 24px 40px; }
+      .themes-section { padding: 48px 24px 72px; }
+      .themes-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .theme-card { min-height: 180px; padding: 24px 20px 28px; }
+    }
+
+    @media (max-width: 480px) {
+      .themes-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="logo" href="index.html">
+      <span class="logo-top">cientista social</span>
+      <span class="logo-bottom">pesquisa...?</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="pesquisa.html" class="active">Pesquisa...?</a></li>
+      <li><a href="#">Entrevistas</a></li>
+      <li><a href="#">Visitas a escolas</a></li>
+      <li><a href="#">Sobre</a></li>
+    </ul>
+  </nav>
+
+  <div class="ticker-wrapper">
+    <div class="ticker-track">
+      <span class="ticker-item">Menstruação</span>
+      <span class="ticker-item">Maternidade</span>
+      <span class="ticker-item">A Barbie</span>
+      <span class="ticker-item">Animes e Mangás</span>
+      <span class="ticker-item">Racismo Estrutural</span>
+      <span class="ticker-item">Covid-19</span>
+      <span class="ticker-item">Movimentos Sociais</span>
+      <span class="ticker-item">Menstruação</span>
+      <span class="ticker-item">Maternidade</span>
+      <span class="ticker-item">A Barbie</span>
+      <span class="ticker-item">Animes e Mangás</span>
+      <span class="ticker-item">Racismo Estrutural</span>
+      <span class="ticker-item">Covid-19</span>
+      <span class="ticker-item">Movimentos Sociais</span>
+    </div>
+  </div>
+
+  <div class="page-hero fade-in">
+    <h1>pesquisa<em>...?</em></h1>
+    <p>Nas Ciências Sociais, qualquer fenômeno da vida cotidiana pode se tornar objeto de estudo. Explore os temas que nossos pesquisadores investigam — e descubra o que a ciência tem a dizer sobre eles.</p>
+  </div>
+
+  <section class="themes-section">
+    <div class="themes-grid">
+      <a class="theme-card card-red fade-in" href="menstruacao.html">
+        <div class="card-top">
+          <span class="card-category">Gênero</span>
+          <div class="card-name">...menstruação</div>
+        </div>
+        <div class="card-bottom">
+          <span class="card-desc">Por que um processo biológico tão comum ainda é tabu?</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+
+      <a class="theme-card card-orange fade-in" href="maternidade.html" style="transition-delay:0.08s">
+        <div class="card-top">
+          <span class="card-category">Família</span>
+          <div class="card-name">...maternidade</div>
+        </div>
+        <div class="card-bottom">
+          <span class="card-desc">O que significa ser mãe em diferentes contextos sociais?</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+
+      <a class="theme-card card-pink fade-in" href="barbie.html" style="transition-delay:0.16s">
+        <div class="card-top">
+          <span class="card-category">Cultura Pop</span>
+          <div class="card-name">...a Barbie!</div>
+        </div>
+        <div class="card-bottom">
+          <span class="card-desc">O que uma boneca diz sobre representação e gênero?</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+
+      <a class="theme-card card-mustard fade-in" href="animes.html" style="transition-delay:0.08s">
+        <div class="card-top">
+          <span class="card-category">Cultura Japonesa</span>
+          <div class="card-name">...animes e mangás</div>
+        </div>
+        <div class="card-bottom">
+          <span class="card-desc">Como a cultura pop japonesa circula e se transforma no Brasil?</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+
+      <a class="theme-card card-black fade-in" href="racismo.html" style="transition-delay:0.16s">
+        <div class="card-top">
+          <span class="card-category">Raça</span>
+          <div class="card-name">...racismo estrutural</div>
+        </div>
+        <div class="card-bottom">
+          <span class="card-desc">Como o racismo opera nas instituições e nas práticas cotidianas?</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+
+      <a class="theme-card card-lilac fade-in" href="covid.html" style="transition-delay:0.24s">
+        <div class="card-top">
+          <span class="card-category">Saúde</span>
+          <div class="card-name">...covid-19</div>
+        </div>
+        <div class="card-bottom">
+          <span class="card-desc">O que a pandemia revelou sobre desigualdade e cuidado?</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <span class="footer-left">cientista social pesquisa...?</span>
+    <span class="footer-right">Projeto de Divulgação Científica — FGV CPDOC</span>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

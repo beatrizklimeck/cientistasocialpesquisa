@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cientista social pesquisa...?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ─── HERO ─── */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 480px;
+    }
+
+    .hero-left {
+      padding: 64px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: clamp(42px, 5vw, 68px);
+      line-height: 1.0;
+      color: var(--dark);
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--orange);
+    }
+
+    .hero-right {
+      background: var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 56px 48px;
+    }
+
+    .hero-manifesto {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1.55;
+      color: #fff;
+    }
+
+    /* ─── RESEARCH GRID ─── */
+    .research-section {
+      padding: 72px 48px;
+      background: var(--cream);
+    }
+
+    .research-header {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 32px;
+    }
+
+    .section-link {
+      font-size: 13px;
+      color: var(--orange);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .section-link:hover { text-decoration: underline; }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .research-card {
+      border-radius: 4px;
+      padding: 28px 24px 32px;
+      min-height: 160px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      cursor: pointer;
+      transition: transform 0.2s, filter 0.2s;
+      text-decoration: none;
+    }
+
+    .research-card:hover { transform: translateY(-3px); filter: brightness(1.05); }
+
+    .card-red     { background: var(--card-red); }
+    .card-orange  { background: var(--card-orange); }
+    .card-pink    { background: var(--card-pink); }
+    .card-mustard { background: var(--card-mustard); }
+    .card-black   { background: var(--card-black); }
+    .card-lilac   { background: var(--card-lilac); }
+
+    .card-category {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .card-name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.1;
+      color: #fff;
+    }
+
+    /* ─── INTERVIEWS ─── */
+    .interviews-section {
+      padding: 72px 48px;
+      background: var(--section-bg);
+    }
+
+    .interviews-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 32px;
+    }
+
+    .interviews-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 28px;
+    }
+
+    .interview-list { display: flex; flex-direction: column; }
+
+    .interview-item {
+      display: grid;
+      grid-template-columns: 56px 1fr auto;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      text-decoration: none;
+      color: inherit;
+      transition: opacity 0.2s;
+    }
+
+    .interview-item:hover { opacity: 0.65; }
+    .interview-item:last-child { border-bottom: none; }
+
+    .interview-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-style: italic;
+      color: var(--orange);
+    }
+
+    .interview-name { font-size: 14px; font-weight: 500; margin-bottom: 3px; }
+    .interview-desc { font-size: 13px; color: var(--text-muted); }
+    .interview-arrow { font-size: 18px; color: var(--orange); }
+
+    /* ─── VISITS ─── */
+    .visits-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 320px;
+    }
+
+    .visits-left {
+      padding: 72px 48px;
+      background: var(--cream);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    .visits-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 1.0;
+    }
+
+    .visits-desc {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      max-width: 360px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--strip-bg);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 14px 24px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      align-self: flex-start;
+      transition: background 0.2s;
+    }
+
+    .btn-primary:hover { background: var(--orange); }
+
+    .visits-right {
+      background: var(--strip-bg);
+    }
+
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-left { padding: 48px 24px 40px; }
+      .hero-right { padding: 40px 24px; }
+      .research-section { padding: 48px 24px; }
+      .research-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .interviews-section { padding: 48px 24px; }
+      .visits-section { grid-template-columns: 1fr; }
+      .visits-left { padding: 48px 24px; }
+      .visits-right { min-height: 160px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="logo" href="#">
+      <span class="logo-top">cientista social</span>
+      <span class="logo-bottom">pesquisa...?</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#">Início</a></li>
+      <li><a href="pesquisa.html">Pesquisa...?</a></li>
+      <li><a href="#">Entrevistas</a></li>
+      <li><a href="#">Visitas a escolas</a></li>
+      <li><a href="#">Sobre</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-left fade-in">
+      <h1 class="hero-title">
+        cientista<br>social<br><em>pesquisa...?</em>
+      </h1>
+    </div>
+    <div class="hero-right fade-in" style="transition-delay:0.1s">
+      <p class="hero-manifesto">Nós acreditamos que todos os temas que podem ajudar a explicar fenômenos sociais são possíveis de serem estudados nas Ciências Sociais. E você, o que pesquisa?</p>
+    </div>
+  </section>
+
+  <div class="ticker-wrapper">
+    <div class="ticker-track">
+      <span class="ticker-item">Menstruação</span>
+      <span class="ticker-item">Maternidade</span>
+      <span class="ticker-item">A Barbie</span>
+      <span class="ticker-item">Animes e Mangás</span>
+      <span class="ticker-item">Racismo Estrutural</span>
+      <span class="ticker-item">Covid-19</span>
+      <span class="ticker-item">Movimentos Sociais</span>
+      <span class="ticker-item">Menstruação</span>
+      <span class="ticker-item">Maternidade</span>
+      <span class="ticker-item">A Barbie</span>
+      <span class="ticker-item">Animes e Mangás</span>
+      <span class="ticker-item">Racismo Estrutural</span>
+      <span class="ticker-item">Covid-19</span>
+      <span class="ticker-item">Movimentos Sociais</span>
+    </div>
+  </div>
+
+  <section class="research-section">
+    <div class="research-header fade-in">
+      <a class="section-link" href="pesquisa.html">ver todos os temas →</a>
+    </div>
+    <div class="research-grid">
+      <a class="research-card card-red fade-in" href="menstruacao.html">
+        <span class="card-category">Gênero</span>
+        <span class="card-name">...menstruação</span>
+      </a>
+      <a class="research-card card-orange fade-in" href="maternidade.html" style="transition-delay:0.08s">
+        <span class="card-category">Família</span>
+        <span class="card-name">...maternidade</span>
+      </a>
+      <a class="research-card card-pink fade-in" href="barbie.html" style="transition-delay:0.16s">
+        <span class="card-category">Cultura Pop</span>
+        <span class="card-name">...a Barbie!</span>
+      </a>
+      <a class="research-card card-mustard fade-in" href="animes.html" style="transition-delay:0.08s">
+        <span class="card-category">Cultura Japonesa</span>
+        <span class="card-name">...animes e mangás</span>
+      </a>
+      <a class="research-card card-black fade-in" href="racismo.html" style="transition-delay:0.16s">
+        <span class="card-category">Raça</span>
+        <span class="card-name">...racismo estrutural</span>
+      </a>
+      <a class="research-card card-lilac fade-in" href="covid.html" style="transition-delay:0.24s">
+        <span class="card-category">Saúde</span>
+        <span class="card-name">...covid-19</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="interviews-section">
+    <div class="interviews-header fade-in">
+      <h2 class="interviews-title">entrevistas</h2>
+      <a class="section-link" href="#">ver todas →</a>
+    </div>
+    <div class="interview-list">
+      <a class="interview-item fade-in" href="#">
+        <span class="interview-num">01</span>
+        <div>
+          <div class="interview-name">Ana Lima</div>
+          <div class="interview-desc">Como cheguei a pesquisar maternidade solo em periferias urbanas</div>
+        </div>
+        <span class="interview-arrow">→</span>
+      </a>
+      <a class="interview-item fade-in" href="#" style="transition-delay:0.08s">
+        <span class="interview-num">02</span>
+        <div>
+          <div class="interview-name">Pedro Souza</div>
+          <div class="interview-desc">De fã de anime a pesquisador da cultura pop japonesa no Brasil</div>
+        </div>
+        <span class="interview-arrow">→</span>
+      </a>
+      <a class="interview-item fade-in" href="#" style="transition-delay:0.16s">
+        <span class="interview-num">03</span>
+        <div>
+          <div class="interview-name">Camila Torres</div>
+          <div class="interview-desc">Por que decidi estudar menstruação como fenômeno social</div>
+        </div>
+        <span class="interview-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="visits-section">
+    <div class="visits-left fade-in">
+      <h2 class="visits-title">visitas a escolas</h2>
+      <p class="visits-desc">Levamos pesquisadoras e pesquisadores das ciências sociais para conversar com estudantes do ensino médio sobre o que significa pesquisar e sobre como temas do cotidiano podem virar objeto de estudo.</p>
+      <a class="btn-primary" href="#">Convidar para sua escola</a>
+    </div>
+    <div class="visits-right fade-in" style="transition-delay:0.15s"></div>
+  </section>
+
+  <footer>
+    <span class="footer-left">cientista social pesquisa...?</span>
+    <span class="footer-right">Projeto de Divulgação Científica — FGV CPDOC</span>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
