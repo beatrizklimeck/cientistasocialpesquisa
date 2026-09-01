@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vlad Schüler — cientista social pesquisa...?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero {
+      padding: 72px 48px 56px;
+      background: var(--cream);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: clamp(40px, 5vw, 72px);
+      line-height: 1.0;
+      margin-bottom: 20px;
+    }
+    .page-hero h1 em { font-style: italic; color: var(--orange); }
+    .page-hero p { font-size: 16px; line-height: 1.7; color: var(--text-muted); max-width: 620px; }
+    @media (max-width: 768px) { .page-hero { padding: 48px 24px 40px; } }
+
+    .breadcrumb { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--orange); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    .conversa { padding: 64px 48px; max-width: 760px; }
+    .pergunta {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-style: italic;
+      font-size: 21px;
+      line-height: 1.35;
+      color: var(--orange);
+      margin-bottom: 18px;
+    }
+    .resposta { font-size: 15px; line-height: 1.85; margin-bottom: 16px; }
+    .bloco-qa { margin-bottom: 48px; }
+    .bloco-qa:last-child { margin-bottom: 0; }
+
+    .voltar { padding: 0 48px 80px; }
+    .voltar a { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); text-decoration: none; }
+    .voltar a:hover { text-decoration: underline; }
+    @media (max-width: 768px) {
+      .conversa { padding: 40px 24px; }
+      .pergunta { font-size: 19px; }
+      .voltar { padding: 0 24px 56px; }
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="logo" href="index.html">
+      <img src="logo.png" alt="cientista social pesquisa...?" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="pesquisa.html">Pesquisa...?</a></li>
+      <li><a href="entrevistas.html">Entrevistas</a></li>
+      <li><a href="visitas.html">Visitas a escolas</a></li>
+      <li><a href="#">Sobre</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero fade-in">
+    <div class="breadcrumb"><a href="entrevistas.html">&larr; entrevistas</a></div>
+    <h1>Vlad Schüler</h1>
+    <p>Antropólogo da ciência e tecnologia. Fez mestrado no Museu Nacional e doutorado em Manchester. Pesquisou comunidades otaku e, depois, inteligência artificial. Hoje ocupa uma posição pedagógica e administrativa em uma universidade.</p>
+  </div>
+
+  <div class="conversa">
+      <div class="bloco-qa fade-in">
+        <h2 class="pergunta">Como e por que você escolheu a graduação em Ciências Sociais?</h2>
+        <p class="resposta">Eu tinha, desde o ensino médio, um interesse muito forte nas ciências humanas (história, sociologia, filosofia, geografia). Eu quase escolhi cursar História, porém o que acabou me levando às Ciências Sociais em particular foi o aspecto mais interdisciplinar do curso.</p>
+      </div>
+
+      <div class="bloco-qa fade-in">
+        <h2 class="pergunta">E os programas de mestrado e doutorado?</h2>
+        <p class="resposta">A decisão do mestrado foi relativamente fácil: a minha orientadora de graduação se formou no Museu Nacional, e me deu suporte muito enfático para que eu prestasse o processo seletivo do Museu. O programa de doutorado foi por uma série de motivos, mas o principal foi a excelência de Manchester na antropologia da ciência e tecnologia com um foco maior nas ciências exatas e engenharias.</p>
+      </div>
+
+      <div class="bloco-qa fade-in">
+        <h2 class="pergunta">Qual foi sua maior surpresa ao começar a estudar Ciências Sociais?</h2>
+        <p class="resposta">Foi descobrir que eu precisava (re)aprender a escrever! Eu achava que era bom em redação, mas a qualidade da escrita necessária nas Ciências Sociais é muito além daquela exigida no ensino médio e vestibular.</p>
+      </div>
+
+      <div class="bloco-qa fade-in">
+        <h2 class="pergunta">Qual etapa da pesquisa você mais gosta?</h2>
+        <p class="resposta">Na pesquisa qualitativa, sem dúvida é a coleta de dados, seja trabalho de campo ou entrevista.</p>
+        <p class="resposta">Na pesquisa quantitativa, sem dúvida é a análise de dados, quando você finalmente cruza dados e estabelece correlações.</p>
+        <p class="resposta">Em ambos os casos, são as etapas em que, na minha opinião, mais se aprende!</p>
+      </div>
+
+      <div class="bloco-qa fade-in">
+        <h2 class="pergunta">Como chegou ao tema do seu TCC na graduação?</h2>
+        <p class="resposta">Foi uma evolução natural da minha trajetória acadêmica. No terceiro semestre da graduação, a minha professora de antropologia sugeriu que eu estudasse otakus devido ao fato de eu fazer parte da comunidade, e o resto da minha graduação foi consequência disso.</p>
+      </div>
+
+      <div class="bloco-qa fade-in">
+        <h2 class="pergunta">E o que levou ao tema da sua dissertação de mestrado?</h2>
+        <p class="resposta">Por sua vez, foi uma evolução natural da minha graduação! Eu era especializado no tema “otakus”, e fez todo sentido continuar estudando o mesmo tema. A principal diferença foi minha decisão, discutida com meu orientador à época, em estudar redes sociais, algo relativamente novo em 2013!</p>
+      </div>
+
+      <div class="bloco-qa fade-in">
+        <h2 class="pergunta">E em sua tese de doutorado?</h2>
+        <p class="resposta">Ao final do mestrado eu estava um pouco exausto com o tema, e queria algo novo. O fato do meu tema anterior não ser particularmente valorizado à época também contou bastante: eu percebi que fazia sentido para a minha carreira que eu pesquisasse um tema de interesse mais geral, daí minha escolha por estudar inteligência artificial (algo que em 2014 e 2015 não estava tão em voga quanto hoje, mas que as pessoas pelo menos conheciam).</p>
+      </div>
+
+      <div class="bloco-qa fade-in">
+        <h2 class="pergunta">Você teria algum conselho para alguém que pensa em fazer ciências sociais?</h2>
+        <p class="resposta">Cultivem sua curiosidade! Não tem nenhuma qualidade mais importante em um cientista social do que uma personalidade inquisitiva.</p>
+      </div>
+
+      <div class="bloco-qa fade-in">
+        <h2 class="pergunta">Estudar ciências sociais modificou seu dia a dia e sua visão sobre o mundo? Como?</h2>
+        <p class="resposta">Completamente. Como dito acima, minha visão de mundo como cientista social me torna uma pessoa muito inquisitiva: coisas que outras pessoas acham natural, correto, normal acabam despertando na minha mente as perguntas “mas <em>por que</em> as coisas são assim? elas sempre foram assim? elas <em>precisam</em> ser assim?”</p>
+      </div>
+
+      <div class="bloco-qa fade-in">
+        <h2 class="pergunta">Como você faz seu trabalho circular?</h2>
+        <p class="resposta">Principalmente via redes sociais. Eu era bastante ativo no Twitter à época do mestrado e doutorado. Mas essencial para a circulação do meu trabalho foi a minha obsessão por fazer com que tudo que eu escrevesse fosse acessível digitalmente e gratuitamente.</p>
+        <p class="resposta">Hoje não trabalho mais com escrita e publicação (tenho uma posição mais pedagógica e administrativa em uma universidade), então não é mais uma questão.</p>
+      </div>
+  </div>
+
+  <div class="voltar">
+    <a href="entrevistas.html">&larr; ver todas as entrevistas</a>
+  </div>
+
+  <footer>
+    <span class="footer-left">cientista social pesquisa...?</span>
+    <span class="footer-right">Projeto de Divulgação Científica — FGV CPDOC</span>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

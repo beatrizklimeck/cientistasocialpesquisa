@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrevistas — cientista social pesquisa...?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero {
+      padding: 72px 48px 56px;
+      background: var(--cream);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: clamp(40px, 5vw, 72px);
+      line-height: 1.0;
+      margin-bottom: 20px;
+    }
+    .page-hero h1 em { font-style: italic; color: var(--orange); }
+    .page-hero p { font-size: 16px; line-height: 1.7; color: var(--text-muted); max-width: 620px; }
+    @media (max-width: 768px) { .page-hero { padding: 48px 24px 40px; } }
+
+    .lista { padding: 64px 48px; max-width: 900px; }
+    .item {
+      display: grid;
+      grid-template-columns: 56px 1fr auto;
+      align-items: start;
+      gap: 24px;
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      text-decoration: none;
+      color: inherit;
+      transition: opacity 0.2s;
+    }
+    .item:hover { opacity: 0.65; }
+    .item:last-child { border-bottom: none; }
+    .item-num { font-family: 'Playfair Display', serif; font-size: 24px; font-style: italic; color: var(--orange); }
+    .item-nome { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 22px; margin-bottom: 6px; }
+    .item-resumo { font-size: 14px; line-height: 1.6; color: var(--text-muted); margin-bottom: 8px; }
+    .item-bio { font-size: 13px; line-height: 1.6; color: var(--text-muted); }
+    .item-seta { font-size: 20px; color: var(--orange); }
+    @media (max-width: 768px) {
+      .lista { padding: 40px 24px; }
+      .item { grid-template-columns: 40px 1fr; gap: 16px; }
+      .item-seta { display: none; }
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="logo" href="index.html">
+      <img src="logo.png" alt="cientista social pesquisa...?" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="pesquisa.html">Pesquisa...?</a></li>
+      <li><a href="entrevistas.html">Entrevistas</a></li>
+      <li><a href="visitas.html">Visitas a escolas</a></li>
+      <li><a href="#">Sobre</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero fade-in">
+    <h1>entrevistas</h1>
+    <p>Conversas com pesquisadoras e pesquisadores sobre como chegaram às Ciências Sociais, como escolheram seus temas e o que a pesquisa mudou no jeito de olhar para o mundo. As mesmas perguntas para todo mundo, respostas bem diferentes entre si.</p>
+  </div>
+
+  <div class="lista">
+      <a class="item fade-in" href="entrevista-marina-nucci.html">
+        <span class="item-num">01</span>
+        <div>
+          <div class="item-nome">Marina Nucci</div>
+          <div class="item-resumo">Da curiosidade sobre pesquisa no ensino médio à antropologia da saúde e do gênero</div>
+          <div class="item-bio">Antropóloga, pesquisa gênero e saúde. Fez mestrado e doutorado no Instituto de Medicina Social da UERJ, na área de Ciências Humanas em Saúde, e é pesquisadora do Centro Latino-americano em Sexualidade e Direitos Humanos (CLAM).</div>
+        </div>
+        <span class="item-seta">&rarr;</span>
+      </a>
+
+      <a class="item fade-in" href="entrevista-clarissa-reche.html">
+        <span class="item-num">02</span>
+        <div>
+          <div class="item-nome">Clarissa Reche</div>
+          <div class="item-resumo">Do desenho industrial ao sangue menstrual, passando por um clube de biohackers</div>
+          <div class="item-bio">Formada em Desenho Industrial e em Ciências Sociais, fez mestrado no IEB/USP e doutorado em Ciências Sociais no IFCH/UNICAMP. Pesquisa gênero, menstruação e antropologia da ciência e tecnologia, e integra o laboratório Labirinto.</div>
+        </div>
+        <span class="item-seta">&rarr;</span>
+      </a>
+
+      <a class="item fade-in" href="entrevista-vlad-schuler.html">
+        <span class="item-num">03</span>
+        <div>
+          <div class="item-nome">Vlad Schüler</div>
+          <div class="item-resumo">De otakus a inteligência artificial, a trajetória de um tema de pesquisa</div>
+          <div class="item-bio">Antropólogo da ciência e tecnologia. Fez mestrado no Museu Nacional e doutorado em Manchester. Pesquisou comunidades otaku e, depois, inteligência artificial. Hoje ocupa uma posição pedagógica e administrativa em uma universidade.</div>
+        </div>
+        <span class="item-seta">&rarr;</span>
+      </a>
+  </div>
+
+  <footer>
+    <span class="footer-left">cientista social pesquisa...?</span>
+    <span class="footer-right">Projeto de Divulgação Científica — FGV CPDOC</span>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
