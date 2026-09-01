@@ -42,9 +42,8 @@ nav {
   border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
-.logo { display: flex; flex-direction: column; line-height: 1.1; text-decoration: none; }
-.logo-top { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 13px; color: var(--dark); letter-spacing: 0.02em; }
-.logo-bottom { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 700; font-size: 15px; color: var(--orange); }
+.logo { display: flex; align-items: center; text-decoration: none; }
+.logo img { height: 44px; width: auto; display: block; }
 
 .nav-links { display: flex; gap: 36px; list-style: none; }
 .nav-links a { font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 400; color: var(--dark); text-decoration: none; opacity: 0.85; transition: opacity 0.2s; }
@@ -90,7 +89,8 @@ footer {
 .btn-back:hover { color: var(--dark); }
 
 @media (max-width: 768px) {
-  nav { padding: 16px 24px; }
+  nav { padding: 12px 24px; }
+  .logo img { height: 34px; }
   .nav-links { gap: 20px; }
   footer { padding: 20px 24px; flex-direction: column; gap: 8px; text-align: center; }
 }
