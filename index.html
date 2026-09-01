@@ -216,7 +216,10 @@
     .btn-primary:hover { background: var(--orange); }
 
     .visits-right {
-      background: var(--strip-bg);
+      background-color: var(--strip-bg);
+      background-image: url('foto-visita.jpg');
+      background-size: cover;
+      background-position: 38% center;
     }
 
     @media (max-width: 768px) {
@@ -229,7 +232,7 @@
       .interviews-section { padding: 48px 24px; }
       .visits-section { grid-template-columns: 1fr; }
       .visits-left { padding: 48px 24px; }
-      .visits-right { min-height: 160px; }
+      .visits-right { min-height: 220px; }
     }
   </style>
 </head>
@@ -243,7 +246,7 @@
       <li><a href="#">Início</a></li>
       <li><a href="pesquisa.html">Pesquisa...?</a></li>
       <li><a href="#">Entrevistas</a></li>
-      <li><a href="#">Visitas a escolas</a></li>
+      <li><a href="visitas.html">Visitas a escolas</a></li>
       <li><a href="#">Sobre</a></li>
     </ul>
   </nav>
@@ -345,7 +348,7 @@
     <div class="visits-left fade-in">
       <h2 class="visits-title">visitas a escolas</h2>
       <p class="visits-desc">Levamos pesquisadoras e pesquisadores das ciências sociais para conversar com estudantes do ensino médio sobre o que significa pesquisar e sobre como temas do cotidiano podem virar objeto de estudo.</p>
-      <a class="btn-primary" href="#">Convidar para sua escola</a>
+      <a class="btn-primary" href="visitas.html">Convidar para sua escola</a>
     </div>
     <div class="visits-right fade-in" style="transition-delay:0.15s"></div>
   </section>
