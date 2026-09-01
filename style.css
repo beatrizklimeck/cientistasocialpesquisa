@@ -4,18 +4,20 @@
   --cream: #F4EFE4;
   --orange: #4A7FA5;
   --dark: #1C1C1A;
-  --card-purple: #6B3FA0;
-  --card-orange: #C94B1E;
-  --card-teal: #1D5F5B;
-  --card-mustard: #A88220;
-  --card-black: #181818;
-  --card-wine: #8B2020;
-  --card-red: #C0190F;
-  --card-pink: #C2457A;
-  --card-lilac: #7B5EA7;
   --section-bg: #EDEAE1;
   --text-muted: #6B6457;
   --strip-bg: #1C4F62;
+
+  /* cores dos temas — retiradas dos posts do Instagram */
+  --card-menstruacao: #7C1F2A;
+  --card-maternidade: #81749C;
+  --card-barbie: #B23271;
+  --card-animes: #C18155;
+  --card-futebol: linear-gradient(165deg, #B08B54 0%, #6E7458 52%, #4E6B84 100%);
+  --card-psicodelicos: linear-gradient(140deg, #243C54 0%, #2B4A42 38%, #6B5A28 72%, #854A24 100%);
+  /* versões chapadas, para bordas e detalhes onde gradiente não funciona */
+  --solid-futebol: #6E7458;
+  --solid-psicodelicos: #2B4A54;
 }
 
 html { scroll-behavior: smooth; }
