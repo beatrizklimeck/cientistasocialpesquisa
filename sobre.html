@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre — cientista social pesquisa...?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero {
+      padding: 72px 48px 56px;
+      background: var(--cream);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: clamp(40px, 5vw, 72px);
+      line-height: 1.0;
+      margin-bottom: 24px;
+    }
+    .page-hero h1 em { font-style: italic; color: var(--orange); }
+    .page-hero p { font-size: 16px; line-height: 1.75; max-width: 660px; margin-bottom: 16px; }
+
+    .bloco { padding: 64px 48px; max-width: 900px; }
+    .bloco h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 26px;
+      margin-bottom: 24px;
+    }
+    .bloco > p { font-size: 15px; line-height: 1.8; margin-bottom: 16px; max-width: 660px; }
+
+    .objetivos { list-style: none; display: flex; flex-direction: column; gap: 18px; max-width: 660px; }
+    .objetivos li { font-size: 15px; line-height: 1.75; padding-left: 20px; border-left: 2px solid var(--orange); }
+
+    .coords { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .coord h3 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 21px; margin-bottom: 14px; }
+    .coord p { font-size: 14px; line-height: 1.75; color: var(--dark); margin-bottom: 12px; }
+    .lattes {
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 2px;
+    }
+    .lattes:hover { opacity: 0.7; }
+
+    .equipe { background: var(--section-bg); padding: 64px 48px; }
+    .equipe h2 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 26px; margin-bottom: 32px; }
+    .equipe h4 {
+      font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--text-muted); margin-bottom: 14px; font-weight: 500;
+    }
+    .grupo { margin-bottom: 36px; }
+    .grupo:last-child { margin-bottom: 0; }
+    .nomes { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px 24px; }
+    .nomes li { font-size: 14px; line-height: 1.5; }
+
+    .links-externos { padding: 64px 48px; display: flex; flex-wrap: wrap; gap: 16px; }
+    .link-ext {
+      display: inline-block;
+      border: 1px solid var(--dark);
+      padding: 14px 22px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--dark);
+      transition: background 0.2s, color 0.2s;
+    }
+    .link-ext:hover { background: var(--dark); color: var(--cream); }
+
+    @media (max-width: 768px) {
+      .page-hero { padding: 48px 24px 40px; }
+      .bloco { padding: 48px 24px; }
+      .equipe { padding: 48px 24px; }
+      .links-externos { padding: 48px 24px; flex-direction: column; }
+      .link-ext { text-align: center; }
+      .coords { grid-template-columns: 1fr; gap: 36px; }
+      .nomes { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="logo" href="index.html">
+      <img src="logo.png" alt="cientista social pesquisa...?" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="pesquisa.html">Pesquisa...?</a></li>
+      <li><a href="entrevistas.html">Entrevistas</a></li>
+      <li><a href="visitas.html">Visitas a escolas</a></li>
+      <li><a href="sobre.html" class="active">Sobre</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero fade-in">
+    <h1>sobre o <em>projeto</em></h1>
+    <p>O Cientista Social Pesquisa é um projeto de divulgação científica vinculado à Escola de Ciências Sociais da FGV CPDOC. Nosso ponto de partida é uma pergunta simples: o que pesquisa um cientista social? A resposta costuma surpreender quem ainda associa as Ciências Sociais apenas a grandes temas abstratos. Menstruação, animes, maternidade, psicodélicos: qualquer fenômeno da vida cotidiana pode se tornar objeto de investigação científica.</p>
+    <p>Buscamos, dessa forma, apresentar os mais diversos temas que compõem a nossa área de pesquisa, evidenciando a pluralidade de interesses, abordagens e possibilidades de investigação.</p>
+  </div>
+
+  <div class="bloco fade-in">
+    <h2>Objetivos</h2>
+    <ul class="objetivos">
+      <li>Ampliar o alcance das produções acadêmicas em Ciências Sociais, com ênfase na diversidade de temas que compõem a área.</li>
+      <li>Aproximar alunos do Ensino Médio e estudantes universitários das temáticas de pesquisa nas Ciências Sociais por meio de publicações digitais, diálogos com autores e oficinas em escolas.</li>
+      <li>Oferecer a alunos de graduação uma experiência prática de divulgação científica, que abarca escrita pública, trabalho editorial colaborativo e extensão universitária.</li>
+    </ul>
+  </div>
+
+  <div class="bloco">
+    <h2>Coordenação</h2>
+    <div class="coords">
+      <div class="coord fade-in">
+        <h3>Beatriz Klimeck</h3>
+        <p>Antropóloga, professora e pesquisadora da FGV CPDOC, onde coordena o Curso de Ciências Sociais, o Laboratório de Antropologia Contemporânea (LAC) e é professora colaboradora do Programa de Pós-Graduação em História, Política e Bens Culturais (PPHPBC).</p>
+        <p>Doutora e mestre em Saúde Coletiva pelo Instituto de Medicina Social (IMS/UERJ) e graduada em Ciências Sociais pela FGV CPDOC. Realizou pós-doutorado no The Airborne Institute (UC San Diego), com pesquisa sobre monitoramento comunitário da qualidade do ar na região do Vale do Rio Tijuana. Sua tese de doutorado, #covidisairborne, examinou a produção e circulação de evidências sobre a transmissão aérea da covid-19.</p>
+        <p>Suas pesquisas articulam antropologia, saúde ambiental e ciência atmosférica, com foco em qualidade do ar interno e externo, ciência cidadã e comunidades em contextos de poluição crônica.</p>
+        <p>Coordena os projetos de divulgação científica “Qual Máscara?”, “O que Respiramos?” e “Cientista Social Pesquisa”. Integra o Comitê de Antropologia Digital e Divulgação Científica da Associação Brasileira de Antropologia (desde 2023). Desde 2026, é presidente do capítulo latino-americano da International Society of Indoor Air Quality and Climate.</p>
+        <a class="lattes" href="http://lattes.cnpq.br/4918862095613545" target="_blank" rel="noopener">Currículo Lattes &rarr;</a>
+      </div>
+      <div class="coord fade-in">
+        <h3>Laura Guimarães</h3>
+        <p>Cocoordenadora do Núcleo de Audiovisual e Documentário do FGV CPDOC, é mestre em Antropologia pela Universidade Federal Fluminense (UFF) e graduada em Ciências Sociais pela mesma instituição. Atua como assistente de pesquisa no FGV CPDOC e cursa a especialização em Cinema Documentário na FGV.</p>
+        <a class="lattes" href="http://lattes.cnpq.br/4273810841869276" target="_blank" rel="noopener">Currículo Lattes &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="equipe">
+    <h2>Equipe</h2>
+    <div class="grupo fade-in">
+      <h4>Pesquisadora vinculada</h4>
+      <ul class="nomes">
+        <li>Heloísa Rocha (graduada FGV CPDOC)</li>
+      </ul>
+    </div>
+    <div class="grupo fade-in">
+      <h4>Estudantes de graduação</h4>
+      <ul class="nomes">
+          <li>Alice Zambaldi</li>
+          <li>Ana Luiza Mota de Brito Sacramento</li>
+          <li>Catharina Vasconcellos Armond</li>
+          <li>Daniel Mendes Molinari</li>
+          <li>Fernanda Rayane de Pontes Ferreira</li>
+          <li>Gabriel de Mendonça Brochier Preisig</li>
+          <li>Isabela da Costa Santos</li>
+          <li>Letícia Lopes Lima</li>
+          <li>Maria Victoria Hockensmith</li>
+          <li>Maya Diniz</li>
+          <li>Nina Lopes Pereira Lima</li>
+          <li>Rômulo Eduardo Girotto</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="links-externos fade-in">
+    <a class="link-ext" href="https://cpdoc.fgv.br/cientistasocialpesquisa/equipe" target="_blank" rel="noopener">Página do projeto no FGV CPDOC &rarr;</a>
+    <a class="link-ext" href="https://www.instagram.com/cientistasocialpesquisa" target="_blank" rel="noopener">@cientistasocialpesquisa &rarr;</a>
+  </div>
+
+  <footer>
+    <span class="footer-left">cientista social pesquisa...?</span>
+    <span class="footer-right">Projeto de Divulgação Científica — FGV CPDOC</span>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
